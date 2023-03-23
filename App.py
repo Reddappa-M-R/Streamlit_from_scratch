@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from plotly import graph_objs as go
 from sklearn.linear_model import LinearRegression
 
-data = pd.read_csv("Data\\Salary_Data.csv")
+data = pd.read_csv("Salary_Data.csv")
 
 x = np.array(data["YearsExperience"]).reshape(-1,1)
 lr = LinearRegression()
@@ -15,7 +15,7 @@ st.title("Salary Predicter")
 
 nav = st.sidebar.radio("Navigation", ["Home","Prediction","Contribute"])
 if nav == "Home":
-    st.image("Data\\Sal.jfif", width = 500)
+    st.image("Sal.jfif", width = 500)
     if st.checkbox("Show table"):
         st.table(data)
 
